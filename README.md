@@ -24,7 +24,6 @@ This is a practical example on how to build an easy and simple microservice. The
         "brand": "string",
         "quantity": "integer",
         "model": "string",
-        "id": "integer",
         "active": "boolean"
     }
     ```
@@ -39,7 +38,7 @@ This is a practical example on how to build an easy and simple microservice. The
             "brand": "string",
             "quantity": "integer",
             "model": "string",
-            "id": "integer",
+            "id": "UUID",
             "active": "boolean"
         }
     ]
