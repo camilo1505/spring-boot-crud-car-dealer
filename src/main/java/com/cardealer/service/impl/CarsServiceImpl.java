@@ -9,7 +9,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -39,7 +40,14 @@ public class CarsServiceImpl implements ICarsService {
     }
 
     @Override
-    public ResponseEntity<ArrayList<CarsEntity>> getAllCars() {
+    public ResponseEntity<List<CarsEntity>> getAllCars() {
+
+        Optional<List<CarsEntity>> carsOpt = this.carsRepository.findByActiveTrue();
+
+        if(carsOpt.isPresent()){
+            return ResponseEntity.ok(carsOpt.get());
+        }
+
         return null;
     }
 }

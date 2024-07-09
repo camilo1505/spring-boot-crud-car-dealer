@@ -22,7 +22,7 @@ public class CarsDto {
     private int quantity;
     @NotBlank
     @NotEmpty
-    @Size(min = 5 ,max = 12 ,message = "Should be at least 5 or lesser than 12 characters")
+    @Size(min = 3 ,max = 12 ,message = "Should be at least 3 or lesser than 12 characters")
     private String model;
 
     private boolean active;
